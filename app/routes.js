@@ -20,10 +20,10 @@ module.exports = function (app, passport, db) {
   // SEARCH FEATURE
   app.get('/search', (req, res) => {
     db.collection('posts')
-      .find({ "city": { $regex: req.query.search, $options: "i" } })
+      .find({ "": { $regex: req.query.search, $options: "i" } })
       .toArray((err, result) => {
         if (err) return console.log(err);
-        res.render('events.ejs', { posts: result });
+        res.render('community.ejs', { posts: result });
       });
   });
 
@@ -47,11 +47,17 @@ module.exports = function (app, passport, db) {
   })
 
   // COMMUNITY PAGE
-  app.get('/community', function (req, res) {
-    // db.collection('posts').find({}).toArray((err, result) => {
-    //     if (err) return console.log(err);
-        res.render('community.ejs');
-      });
+  app.get('/community', isLoggedIn, function(req, res) {
+    db.collection('posts').find().toArray((err, result) => {
+      if (err) return console.log(err)
+      res.render('community.ejs', {
+        user: req.user,
+        posts: result
+      })
+    })
+});
+
+
 
   // PROFILE SECTION =========================
   app.get('/profile', isLoggedIn, function (req, res) {
@@ -89,20 +95,23 @@ module.exports = function (app, passport, db) {
     })
   })
 
-  // app.put('/upVote', (req, res) => {
-  //   db.collection('messages')
-  //     .findOneAndUpdate({ name: req.body.name, msg: req.body.msg }, {
-  //       $set: {
-  //         thumbUp: req.body.thumbUp + 1
-  //       }
-  //     }, {
-  //       sort: { _id: -1 },
-  //       upsert: true
-  //     }, (err, result) => {
-  //       if (err) return res.send(err)
-  //       res.send(result)
-  //     })
-  // })
+  app.put('/upVote', (req, res) => {
+    db.collection('posts')
+      .findOneAndUpdate({ 
+        'name': req.body.name,
+        'msg': req.body.msg,
+        'thumbUp': thumbUp }, {
+        $set: {
+          thumbUp: req.body.thumbUp + 1
+        }
+      }, {
+        sort: { _id: -1 },
+        upsert: true
+      }, (err, result) => {
+        if (err) return res.send(err)
+        res.send(result)
+      })
+  })
 
   // =============================================================================
   // AUTHENTICATE (FIRST LOGIN) ==================================================

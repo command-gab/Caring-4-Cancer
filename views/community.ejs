@@ -10,18 +10,59 @@
 
 <body>
   <div class="container">
-
-    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+          <header>
+              <nav>
+                  <ul>
+                      <img src="/images/logo3.png" class="logo">
+  
+                      <li><a href="/">HOME</a></li>
+                      <li><a href="/about">ABOUT</a></li>
+                      <li><a href="/events">EVENTS</a></li>
+                  </ul>
+  
+                  <a href="/login" id="login">LOGIN</a>
+                  <a href="/signup" id="signup">SIGN UP</a>
+              </nav>
+          </header>
 
     <form action="/search" class="form" method="GET">
       <input type="text" placeholder="Search" name="search" />
-      <button type="submit">🔍</button>
+      <button type="submit">Explore</button>
   </form>
 
     <main>
       <div class="col-sm-6">
-        <h3>Discussion Post</h3>
-        <ul class="discussion">
+        <section class="discussion">
+          <h2>DISCUSSION POSTS</h2>
+
+          <div class="firstquestion">
+              <h3>Best wigs?</h3>
+              <p>My sister (54f) was recently diagnosed with stage 4 ovarian cancer. She had her first chemo treatment
+                  on Friday. My stylist already agreed to styling and cutting her wig when she gets it. Whoever my
+                  sister is working with is saying the wig will be $400 for a synthetic one. Is this about right for a
+                  wig?</p>
+
+
+              <span>Posted 2 hours ago by @denise_c</span>
+          </div>
+
+          <div class="secondquestion">
+              <h3>Recommended coloring book during your days of chemo.</h3>
+              <p>Got this for a friend and will be fun to see which one she is going to color first! Full of positive
+                  messages, but not always PG. You definitely don't want the kids helping with the coloring in this
+                  one!</p>
+              <img src="images/coloringbook.jpg">
+              <span>Posted 3 hours ago by @nick90210</span>
+          </div>
+      </section>
+
+
+
+
+
+
+
+        <ul class="discussionPosts">
         <% for(let i=0; i<posts.length; i++) {%>
           <li class="message">
             <span><%= posts[i].name %></span>
@@ -43,6 +84,28 @@
       <% } %>
     </main>
 </div>
+
+<footer>
+  <section class="social">
+      <a href="https://twitter.com/gabrielledaryl" class="fa fa-twitter fa-2x"></a>
+      <a href="https://www.linkedin.com/in/gabriellesmallwood/" class="fa fa-linkedin fa-2x"></a>
+  </section>
+
+  <section class="sitemap">
+      <h4><a href="/events">EVENTS</h4></a>
+
+      <h4><a href="/about">ABOUT</h4></a>
+
+      <span class="address"><i class="fa fa-location-arrow" aria-hidden="true"></i><strong> 1900 Market St, Philadelphia, PA 19103</strong></span>
+      <span class="number"><i class="fa fa-phone" aria-hidden="true"></i><strong> (267) 555 5555</strong></span>
+      <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i><strong> info@cforc.com</strong></span>
+
+      </section>
+
+      <p class="ein">Gabrielle Smallwood - Demo Day (December 2, 2021)</p>
+      <img src="/images/logo2.png" class="logo2">
+</footer>
+
 
 <script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
 
