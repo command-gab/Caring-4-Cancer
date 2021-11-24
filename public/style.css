@@ -1,0 +1,496 @@
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+    color: white;
+    font-size: 12px;
+    line-height: 1.4;
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  
+  *{
+    box-sizing: border-box;
+  }
+  
+  .clear {
+   clear: both;
+  }
+  
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+
+header{
+    background: rgb(242, 232, 99);
+    height: 700px;
+    margin: -3% -1% 0 -1%; 
+}
+
+li{
+    float: left;
+    margin-left: 15%;
+    margin-top: 3%;
+    list-style: none;
+    width: 4%;
+}
+
+li a{
+    align-items: center;
+    text-decoration: none;    
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px grey;
+
+}
+
+li a:hover{
+    color: white;
+}
+
+.logo{
+    align-items: center;
+    margin-left: 37%;
+    margin-top: 4%;
+    /* height: 400px; */
+}
+  
+header h1{
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+    color: rgb(4, 104, 101);
+    text-align: center;
+    padding-top: 1%;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+header p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(4, 104, 101);
+    height: 100px;
+    width: 800px;
+    margin-top: 2%;
+    margin-left: 22%;
+}
+
+#donate{
+    float: left;
+    height: 50px;
+    width: 200px;
+    background-color:rgb(4, 104, 101);
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 0%;
+    color:white;
+    margin-top: -1%;
+    margin-left: 43%;
+    padding-top: 1%;
+    text-align: center;
+}
+
+#donate:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  
+#login, #signup{
+    margin-right: 3%;
+    margin-top: 3%;
+    height: 30px;
+    width: 5%;
+    padding-top: 0.3%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(4, 104, 101);
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    float: right;
+}
+
+#login:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#signup:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+img{
+    margin-left: 45%;
+}
+  
+#form{
+    float: left;
+    margin-left: 41%;
+    margin-top: -3%;
+    box-shadow: 3px 3px 3px #888888;
+
+}
+
+#query{
+    height: 40px;
+    width: 200px;
+}
+
+#go{
+    height: 40px;
+    width: 50px;
+}
+.offer{
+    background: white;
+    width: 100%;
+    height: 500px;
+    margin: -1% -1% 0 -1%; 
+}
+  
+.offer h2{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    padding-top: 2%;
+    text-shadow: 2px 2px 5px grey;
+}
+  
+  
+.offer img{
+    float: left;
+    margin-top: 3%;
+    margin-left: 9%;
+    box-shadow: 10px 10px 5px grey;
+
+}
+  
+.discussion{
+    background: rgb(4, 104, 101);
+    height: 860px;
+    width: 100%;
+}
+
+.discussion h2{
+    text-align: center;
+    font-size: 40px;
+    color: rgb(242, 232, 99);
+    padding-top: 2%;
+    text-shadow: 2px 2px 4px #000000;
+}
+  
+.firstquestion{
+    float: left;
+    height: 150px;
+    width: 900px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-left: 17%;
+    margin-top: 2%;
+    background: rgba(0,0,0,0.19);
+    box-shadow: 5px 5px 4px black;
+}
+
+.firstquestion:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.firstquestion h3{
+    font-size: 20px;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.firstquestion p{
+    font-size: 15px;
+    margin-top: -1%;
+    margin-left: 3%;
+}
+
+.firstquestion span{
+    margin-top: 3%;
+    font-size: 12px;
+    margin-left: 3%;
+    color:rgb(242, 232, 99);
+}
+
+.secondquestion{
+    float: left;
+    height: 450px;
+    width: 900px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-left: 17%;
+    background: rgba(0,0,0,0.19);
+    box-shadow: 5px 5px 4px black;
+}
+
+.secondquestion:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.secondquestion h3{
+    font-size: 20px;
+    margin-top: 1%;
+    margin-left: 3%;
+}
+
+.secondquestion p{
+    font-size: 15px;
+    margin-top: -1%;
+    margin-left: 3%;
+}
+
+.secondquestion img{
+    float: left;
+    margin-left: 3%;
+}
+
+.secondquestion span{
+    margin-top: 35.5%;
+    font-size: 12px;
+    margin-left: -26%;
+    color:rgb(242, 232, 99);
+    float: left;
+}
+  
+.viewmore{
+    float: left;
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    padding-top: 1%;
+    background-color:rgb(242, 232, 99);
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid black;
+    border-radius: 0%;
+    color:rgb(22, 31, 42);
+    margin-top: -5.5%;
+    margin-left: 43%;
+}
+  
+.viewmore:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+  
+/* SLIDESHOW: */
+
+#slideshow h2{
+    text-align: center;
+    font-size: 40px;
+    color: black;
+    margin-bottom: 2%;
+    text-shadow: 2px 2px 5px grey;
+}
+
+ *,
+*::before,
+*::after { box-sizing: border-box; }
+
+html,
+body {
+  justify-content: center;
+  align-items: center;
+  clear: both;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  
+  width: 700px;
+  height: 400px;
+  margin-left: 25%;
+  margin-bottom: 3%;
+  overflow: hidden;
+
+  border-radius: 5px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Light blue cover above the slide show */
+.card::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 900;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(140, 22, 115, 0.2);
+}
+
+.card_part {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 7;
+
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  
+  transform: translateX( 700px );
+  background-image: url(https://i.ibb.co/KypJct5/1.jpg);
+  animation: opaqTransition 28s cubic-bezier(0, 0, 0, 0.97) infinite;
+}
+
+.card_part.card_part-two {
+  z-index: 6;
+  background-image: url( https://i.ibb.co/TtKW38N/2.png );
+  animation-delay: 7s;
+}
+
+.card_part.card_part-three {
+  z-index: 5;
+  background-image: url( https://i.ibb.co/QJ8Pk5R/3.png );
+  animation-delay: 14s;
+}
+
+.card_part.card_part-four {
+  z-index: 4;
+  background-image: url( https://i.ibb.co/q0B72KK/4.png );
+  animation-delay: 21s;
+}
+
+.card_part.card_part-five {
+    z-index: 3;
+    background-image: url( https://i.ibb.co/2ZGytP5/5.jpg );
+    animation-delay: 14s;
+  }
+
+  .card_part.card_part-six {
+    z-index: 2;
+    background-image: url( https://i.ibb.co/SdM3LyG/6.jpg );
+    animation-delay: 7s;
+  }
+  
+
+
+@keyframes opaqTransition {
+  3% { transform: translateX( 0 ); }
+  25% { transform: translateX( 0 ); }
+  28% { transform: translateX( -700px ); }
+  100% { transform: translateX( -700px ); }
+} 
+
+/* FOOTER: */
+
+footer{
+    height: 300px;
+    background:rgb(242, 232, 99);
+    margin-left: -1%;
+    margin-right: -1%;
+}
+
+/* .connect{
+    float: left;
+    color: black;
+    font-size: 20px;
+    /* margin-top: -2%; */
+    /* clear: both;
+}
+
+.contact{
+    float: right;
+    color: black;
+    font-size: 20px;
+} */ 
+
+.social{
+    margin-left: 4%;
+    margin-top: 2%;
+    float: left;
+    color: rgb(4, 104, 101);
+    size: 8px;
+    padding-bottom: 2%;
+}
+
+.sitemap h4{
+    margin-left: 4%;
+    clear: both;
+}
+
+.sitemap h4 a{
+    color: black;
+}
+
+.sitemap p{
+    color: rgb(4, 104, 101);
+    clear: both;
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 4%;  
+}
+
+.sitemap > .name{
+    float: right;
+    margin-top: -12%;
+    margin-right: 5%;
+    color: rgb(4, 104, 101);
+    font-size: 12px;
+    font-weight: 700;
+    height: 50px;
+    width: 135px;
+}
+
+.address{
+    float: right;
+    margin-right: 4%;
+    margin-top: -8%;
+    color: rgb(4, 104, 101);
+    font-size: 13px;
+    font-weight: 400;
+    height: 60px;
+    width: 145px;
+
+}
+
+.number{
+    float: right;
+    margin-right: 4%;
+    margin-top: -4.5%;
+    color: rgb(4, 104, 101);
+    font-size: 13px;
+    font-weight: 400;
+    height: 60px;
+    width: 145px;
+
+}
+
+.email{
+    float: right;
+    margin-right: 4%;
+    margin-top: -2%;
+    color: rgb(4, 104, 101);
+    font-size: 13px;
+    font-weight: 400;
+    height: 60px;
+    width: 145px;
+
+}
+
+.ein{
+    border-top: 1px solid white;
+    color: rgb(4, 104, 101);
+    font-size: 12px;
+    font-weight: 700;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 1%;
+    padding-top: 1%;
+}
+
+.logo2{
+    float: right;
+    margin-top: -2.5%;
+    margin-right: 4%;
+}

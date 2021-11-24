@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Caring for Cancer</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav>
+                <ul>
+                    <img src="/images/logo3.png" class="logo">
+
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/login">COMMUNITY</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                </ul>
+
+                <a href="/login" id="login">LOGIN</a>
+                <a href="/signup" id="signup">SIGN UP</a>
+
+            </nav>
+        </header>
+
+        <main>
+            <img src="/images/form.png" class="form">
+
+            <h3>Please provide the following information for event registration:</h3>
+
+            <form method="post" action="/eventsForm">
+                <section id="form">
+                    <h2>Name</h2>
+                    <input type="text" class="name2" name="name" placeholder="First and last name">
+                    <h2>Email</h2>
+                    <input type="text" class="email2" name="email" placeholder="Email address">
+                    <h2 class="quantity">How many are attending?</h2>
+                    <input type="number" class="quantity2" placeholder="Attendees" name="quantity">
+                    <h2 class="event">Select an event:</h2>
+                    <select name = "event">
+                        <option value="toyDrive" name="toyDrive">Toy Drive</option>
+                        <option value="meditation" name="meditation">Monday Meditation</option>
+                        <option value="virtualMeet" name="virtualMeet">Virtual Meeting (12/8)</option>
+                        <option value="kidTeen" name="kidTeen">Kid/Teen Support</option>
+                        <option value="xmasDinner" name="xmasDinner">Christmas Dinner</option>
+                        <option value="storiesSanta" name="storiesSanta">Stories with Santa</option>
+                        <option value="cooking" name="cooking">Cooking Demo</option>
+                        <option value="meeting2" name="meeting2">Virtual Meeting (12/30)</option>
+                    </select>
+
+                    <button class="register">✓ Register</button>
+                </section>
+            </form>
+
+            <footer>
+                <section class="social">
+                    <a href="https://twitter.com/gabrielledaryl" class="fa fa-twitter fa-2x"></a>
+                    <a href="https://www.linkedin.com/in/gabriellesmallwood/" class="fa fa-linkedin fa-2x"></a>
+                </section>
+
+                <section class="sitemap">
+                    <h4><a href="/events">EVENTS</h4></a>
+
+                    <h4><a href="/about">ABOUT</h4></a>
+
+                    <span class="address"><i class="fa fa-location-arrow" aria-hidden="true"></i><strong> 1900 Market
+                            St, Philadelphia, PA 19103</strong></span>
+                    <span class="number"><i class="fa fa-phone" aria-hidden="true"></i><strong> (267) 555
+                            5555</strong></span>
+                    <span class="email"><i class="fa fa-envelope" aria-hidden="true"></i><strong>
+                            info@cforc.com</strong></span>
+
+                </section>
+
+                <p class="ein">Gabrielle Smallwood - Demo Day (December 2, 2021)</p>
+                <img src="/images/logo2.png" class="logo2">
+            </footer>
+
+            <script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
+
+            <script src="main.js"></script>
+
+</body>
+
+</html>

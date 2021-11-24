@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <title>Caring for Cancer</title>
+
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <nav>
+                <ul>
+                    <img src="/images/logo3.png" class="logo">
+
+                    <li><a href="/">HOME</a></li>
+                    <li><a href="/login">COMMUNITY</a></li>
+                    <li><a href="/events">EVENTS</a></li>
+                </ul>
+
+                <a href="/login" id="login">LOGIN</a>
+                <a href="/signup" id="signup">SIGN UP</a>
+
+            </nav>
+
+            <section class="registered">
+                <h3 class="">December Attendees:</h3>
+                <ul>
+                    <% for(let i=0; i<attendees.length; i++) {%>
+                        <% if(attendees[i].attendees===true){ %>
+                            <li class="name">Name: <%= attendees[i].name %>
+                            <span class="email">Email: <%= attendees[i].email %></span>
+                            <span class="quantity">Attendees: <%= attendees[i].quantity %></span>
+                            <span class="event">Event: <%= attendees[i]['event'] %></span>
+                            </li>
+                            <% } %>
+                                <% } %>
+                </ul>
+    </div>
+    </section>
+
+    <script src="/public/main.js"></script>
+
+</body>
+
+</html>

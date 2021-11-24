@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Caring for Cancer</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="community.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+
+    <form action="/search" class="form" method="GET">
+      <input type="text" placeholder="Search" name="search" />
+      <button type="submit">🔍</button>
+  </form>
+
+    <main>
+      <div class="col-sm-6">
+        <h3>Discussion Post</h3>
+        <ul class="discussion">
+        <% for(let i=0; i<posts.length; i++) {%>
+          <li class="message">
+            <span><%= posts[i].name %></span>
+            <span><%= posts[i].msg %></span>
+            <span><%= posts[i].thumbUp %></span>
+            <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+          </li>
+        <% } %>
+        </ul>
+
+        <h2>Share your message</h2>
+      <% if (user.local.email) { %>
+        <form action="/discussion" method="POST">
+          <input type="text" value="<%= user.local.email %>" name="name">
+          <input type="text" placeholder="What's on your mind?" name="msg">
+          <button type="submit" class="submitPost">Post</button>
+        </form>
+      </div>
+      <% } %>
+    </main>
+</div>
+
+<script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
+
+<script src="/public/main.js"></script>
+
+</body>
+</html>
