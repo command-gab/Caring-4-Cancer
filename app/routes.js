@@ -101,16 +101,16 @@ module.exports = function (app, passport, db, ObjectId) {
 
   // POST/PUT/DELETE ROUTES ===============================================================
 
-  app.post('/eventForm', (req, res) => {
+  app.post('/register', (req, res) => {
     db.collection('registered').insertOne(
       {
         user: req.user,
         email: req.body.email,
         quantity: req.body.quantity,
         event: req.body.event
-      }), (err, result) => {
-        console.log('saved to database')
-        res.redirect('/form')
+      }), (err, res) => {
+        if (err) return console.log(err)
+        res.redirect('/profile')
       }
   });
 
@@ -120,7 +120,7 @@ module.exports = function (app, passport, db, ObjectId) {
       msg: req.body.msg,
       name: req.body.name,
       heart: 0
-    }, (err, result) => {
+    }, (err, res) => {
       if (err) return console.log(err)
       res.redirect('/community')
     })
