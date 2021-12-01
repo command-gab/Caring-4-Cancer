@@ -231,7 +231,7 @@ p{
         color: rgb(242, 232, 99);
     }
 
-    body, main, header, .community{
+    body, main, header, .postLogo{
         width: 100%;
     }
 
@@ -241,11 +241,16 @@ p{
     }
 
     .submitComment{
-        margin-left: 25%;
+        margin-left: 10%;
     }
 
     #comments{
-        margin-left: 7%;
+        margin-left: 4%;
+        margin-top: 8%;
+    }
+
+    .border-bottom{
+        visibility: hidden;
     }
 
 }
@@ -268,7 +273,11 @@ p{
             color: rgb(242, 232, 99);
         }
     
-        body, main, header, .community{
+        body, main, header{
+            width: 100%;
+        }
+
+        .postLogo{
             width: 100%;
         }
     
@@ -277,7 +286,17 @@ p{
             margin-left: 1%;
         }
 
-        #comments{
+        .submitComment{
             margin-left: 30%;
+        }
+
+        #comments{
+            margin-left: 28%;
+            margin-top: 8%;
+
+        }
+
+        .border-bottom{
+            visibility: hidden;
         }
 }

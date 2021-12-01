@@ -327,7 +327,19 @@ h2{
 
     .discussionPosts, .message, #share{
         width: 90%;
-        margin-left: -1%;
+        margin-left: 2%;
+    }
+
+    .respectful{
+        margin-top: 3%;
+        width: 90%;
+        margin-left: 3%;
+        height: 300px;
+
+    }
+
+    .border-bottom, .line{
+        visibility: hidden;
     }
 }
            
@@ -355,10 +367,22 @@ h2{
     
         .discussionPosts, .message{
             width: 90%;
-            margin-left: 1%;
+            margin-left: 4%;
         }
 
         #share{
-            margin-left: 20%;
+            margin-left: 30%;
+        }
+
+        .respectful{
+            margin-top: 3%;
+            width: 80%;
+            margin-left: 11%;
+            height: 200px;
+    
+        }
+
+        .border-bottom, .line{
+            visibility: hidden;
         }
 }
