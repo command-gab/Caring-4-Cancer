@@ -39,8 +39,13 @@ a:hover{
   color: black;
 }
 
+h1{
+  font-family: 'Fjalla One', sans-serif;
+}
+
 .btn{
   background-color: rgb(242, 232, 99);
+  font-family: 'Fjalla One', sans-serif;
   border: none;
   color: black;
 }
@@ -48,6 +53,10 @@ a:hover{
 .btn:hover{
   background-color: whitesmoke;
   color: rgb(4, 104, 101);
+}
+
+.form-group{
+  margin-top: -2%;
 }
 
 .container{

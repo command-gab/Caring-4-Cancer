@@ -60,7 +60,7 @@ header img{
 
 li{
     float: left;
-    margin-left: 14%;
+    margin-left: 15%;
     margin-top: 3%;
     list-style: none;
     width: -2%;
@@ -71,7 +71,7 @@ li a{
     text-decoration: none;    
     color: white;
     font-size: 20px;
-    font-weight: 700;
+    font-family: 'Fjalla One', sans-serif;
     text-shadow: 1px 1px 1px grey;
 
 }
@@ -92,7 +92,7 @@ li a:hover {
     color: black;
     text-align: center;
     font-size: 15px;
-    font-weight: 700;
+    font-family: 'Fjalla One', sans-serif;
     float: right;
 }
 
@@ -119,10 +119,11 @@ li a:hover {
 }
 
 h1{
-    font-weight: 400;
-    margin-left: -15%;
-    text-shadow: 2px 2px 2px black;
-
+    font-family: 'Fjalla One', sans-serif;
+    margin-left: -8%;
+    margin-top: 16%;
+    text-shadow: 1px 1px 1px black;
+    padding-bottom: 2%;
 }
 
 #heartPara{
@@ -130,11 +131,12 @@ h1{
     color: rgb(4, 104, 101);
 }
 
-p{
+#bio p{
     font-size: 16px;
     color: black;
-    margin-left: -15%;
-    width: 600px;
+    margin-left: -5%;
+    font-family: 'Fjalla One', sans-serif;
+    width: 500px;
 }
 
 /* FOOTER: */

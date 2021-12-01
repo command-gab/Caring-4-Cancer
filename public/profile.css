@@ -53,7 +53,7 @@ header img{
 
 li{
     float: left;
-    margin-left: 10%;
+    margin-left: 12%;
     margin-top: 3%;
     list-style: none;
     width: -2%;
@@ -64,7 +64,7 @@ li a{
     text-decoration: none;    
     color: white;
     font-size: 20px;
-    font-weight: 700;
+    font-family: 'Fjalla One', sans-serif;
     text-shadow: 1px 1px 1px grey;
 
 }
@@ -85,7 +85,7 @@ li a:hover {
     color: black;
     text-align: center;
     font-size: 15px;
-    font-weight: 700;
+    font-family: 'Fjalla One', sans-serif;
     float: right;
 }
 
@@ -106,8 +106,8 @@ h1{
     text-align: center;
     color:rgb(4, 104, 101);
     padding-bottom: 2%;
-    font-size: 45px;
-    font-weight: 600;
+    font-size: 50px;
+    font-family: 'Fjalla One', sans-serif;    
     margin-top: 3%;
     text-shadow: 2px 2px 2px black;
 }
@@ -118,8 +118,8 @@ h1{
 
 h2{
     text-align: center;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Fjalla One', sans-serif;
     text-shadow: 1px 1px 1px black;
 }
 
@@ -127,8 +127,8 @@ h3{
     margin-top: 3%;
     text-align: center;
     color: rgb(242, 232, 99);
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 40px;
+    font-family: 'Fjalla One', sans-serif;
     text-shadow: 3px 3px 3px black;
 }
 
@@ -230,6 +230,10 @@ span{
     float: right;
     margin-top: 5%;
     margin-right: 3%;
+}
+
+.border-bottom{
+    margin-top: -42%;
 }
 
 /* FOOTER: */
@@ -335,6 +339,10 @@ footer{
     margin-top: -0.5%;
     margin-right: -37%;
 }
+
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
 
 @media (min-width: 300px) and (max-width: 600px) {
 
