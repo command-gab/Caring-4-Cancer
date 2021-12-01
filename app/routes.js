@@ -108,7 +108,7 @@ module.exports = function (app, passport, db, ObjectId) {
         email: req.body.email,
         quantity: req.body.quantity,
         event: req.body.event
-      }), (err, res) => {
+      }), (err, result) => {
         if (err) return console.log(err)
         res.redirect('/profile')
       }
@@ -120,7 +120,7 @@ module.exports = function (app, passport, db, ObjectId) {
       msg: req.body.msg,
       name: req.body.name,
       heart: 0
-    }, (err, res) => {
+    }, (err, result) => {
       if (err) return console.log(err)
       res.redirect('/community')
     })
