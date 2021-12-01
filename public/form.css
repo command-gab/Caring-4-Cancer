@@ -47,7 +47,7 @@ header img{
 
 li{
     float: left;
-    margin-left: 14%;
+    margin-left: 11%;
     margin-top: 3%;
     list-style: none;
     width: -2%;
@@ -67,7 +67,7 @@ li a:hover {
     color: rgb(242, 232, 99);
 }
 
-#login, #signup{
+#login, #logout{
     margin-right: 3%;
     margin-top: 2%;
     height: 30px;
@@ -87,14 +87,14 @@ li a:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-#signup:hover {
+#logout:hover {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 #form{
 	border: 5px solid black;
 	border-radius: 10px;
-	height: 400px;
+	height: 450px;
 	width: 400px;
     margin-left: 35%;
     margin-top: 3%;
@@ -158,6 +158,13 @@ input[type='text'], input[type='number']{
 	height: 30px;
 	width: 250px;
     margin-left: 7%;
+}
+
+#success{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 5%;
+    margin-left: -10%;
 }
 
 /* FOOTER: */
@@ -258,3 +265,70 @@ footer{
     margin-top: -2.5%;
     margin-right: 4%;
 }
+
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    footer{
+        display: none;
+    }
+
+    li a{
+        font-size: 12px;
+    }
+
+    #logout{
+        font-size: 12px;
+        margin-left: -5%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    body, main, header, .form{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    #form{
+        width: 80%;
+        margin-left: 10%;
+    }
+}
+           
+    @media (min-width: 601px) and (max-width: 1024px) {
+       
+        footer{
+            display: none;
+        }
+    
+        li a{
+            font-size: 12px;
+        }
+    
+        #logout{
+            font-size: 12px;
+            margin-left: -5%;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        body, main, header, .form{
+            width: 100%;
+        }
+    
+        h2{
+            font-size: 18px;
+        }
+    
+        #form{
+            margin-left: 26%;
+        }
+    }

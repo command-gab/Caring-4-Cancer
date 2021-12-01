@@ -369,3 +369,94 @@ footer{
     margin-top: -2.5%;
     margin-right: 4%;
 }
+
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    footer, .discussion, .card, #slideshow{
+        display: none;
+    }
+
+    li a{
+        font-size: 12px;
+    }
+
+    #login{
+        font-size: 12px;
+        margin-left: -5%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    #signup{
+        font-size: 12px;
+        margin-right: 10%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    body, main, header, .program{
+        width: 100%;
+    }
+
+    h2{
+        font-size: 18px;
+    }
+
+    #december{
+        width: 100%;
+        margin-left: 15%;
+    }
+
+    .meeting2{
+        margin-right: 32%;
+    }
+}
+           
+    @media (min-width: 601px) and (max-width: 1024px) {
+       
+        footer, .discussion, .card, #slideshow{
+            display: none;
+        }
+    
+        li a{
+            font-size: 12px;
+        }
+    
+        #login{
+            font-size: 12px;
+            margin-left: -5%;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        #signup{
+            font-size: 12px;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        body, main, header, .program{
+            width: 100%;
+        }
+    
+        h2{
+            font-size: 18px;
+        }
+    
+        #december{
+            width: 100%;
+            margin-left: 10%;
+        }
+    
+        .meeting2{
+            margin-right: 22%;
+        }
+    }

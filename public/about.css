@@ -120,20 +120,21 @@ li a:hover {
 
 h1{
     font-weight: 400;
-    margin-left: -7%;
+    margin-left: -15%;
     text-shadow: 2px 2px 2px black;
 
 }
 
 #heartPara{
-    margin-left: 40%;
+    margin-left: 35%;
     color: rgb(4, 104, 101);
 }
 
 p{
     font-size: 16px;
     color: black;
-    margin-left: -7%;
+    margin-left: -15%;
+    width: 600px;
 }
 
 /* FOOTER: */
@@ -235,3 +236,107 @@ footer{
     margin-top: -2.5%;
     margin-right: 4%;
 }
+
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    footer, .discussion, .card, #slideshow{
+        display: none;
+    }
+
+    li a{
+        font-size: 12px;
+    }
+
+    #login{
+        font-size: 12px;
+        margin-left: -5%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    #signup{
+        font-size: 12px;
+        margin-right: 10%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    body, main, header, .about2{
+        width: 100%;
+    }
+
+    .about2{
+        margin-top: -25%;
+        margin-left: -2%;
+    }
+
+    h1{
+        font-size: 20px;
+        margin-top: 10%;
+        margin-left: 25%;
+    }
+
+    p{
+        height: 200px;
+        width: 50%;
+        margin-left: 30%;
+    }
+}
+           
+    @media (min-width: 601px) and (max-width: 1024px) {
+       
+        footer, .discussion, .card, #slideshow{
+            display: none;
+        }
+    
+        li a{
+            font-size: 12px;
+        }
+    
+        #login{
+            font-size: 12px;
+            margin-left: -5%;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        #signup{
+            font-size: 12px;
+            margin-right: 1%;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        body, main, header, .about2{
+            width: 100%;
+        }
+    
+        .about2{
+            margin-top: -5%;
+            margin-left: 1%;
+        }
+    
+        h1{
+            font-size: 35px;
+            margin-top: 40%;
+            margin-left: -36%;
+        }
+    
+        #heartPara{
+            margin-left: 10%;
+        }
+
+        p{
+            height: 300px;
+            width: 100%;
+            margin-left: -35%;
+        }
+    }

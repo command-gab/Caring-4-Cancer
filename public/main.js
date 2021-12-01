@@ -1,49 +1,45 @@
-let thumbUp = document.getElementsByClassName("fa-thumbs-up");
+let heart = document.getElementsByClassName('fa-heart');
+let trash = document.getElementsByClassName('fa-trash');
 
-Array.from(thumbUp).forEach(function (element) {
+Array.from(heart).forEach(function (element) {
   element.addEventListener('click', function () {
-    const name = this.parentNode.parentNode.childNodes[1].innerText
-    const msg = this.parentNode.parentNode.childNodes[3].innerText
-    const thumbUp = parseFloat(this.parentNode.parentNode.childNodes[5].innerText)
-    fetch('upVote', {
-      method: 'put',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        'name': name,
-        'msg': msg,
-        'thumbUp': thumbUp
+      const heartID = element.dataset.id
+      fetch('like', {
+          method: 'put',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              heartID: heartID,
+          }),
       })
-    })
-      .then(response => {
-        if (response.ok) return response.json()
-      })
-      .then(data => {
-        console.log(data)
-        window.location.reload(true)
-      })
+          .then(function (response) {
+              window.location.reload()
+          })
   });
 });
 
-// document.querySelector('.register').addEventListener('click', postToAdmin)
+Array.from(trash).forEach(function (element) {
+    element.addEventListener('click', function () {
+        const eventID = element.dataset.id
+        fetch('profile', {
+            method: 'delete',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                eventID: eventID,
+            }),
+        })
+            .then(function (response) {
+                window.location.reload()
+            })
+    });
+});
 
-// function postToAdmin() {
-//   fetch('admin', {
-//     method: 'post',
-//     headers: {
-//       'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//       name: name,
-//       email: email,
-//       attendees: attendees,
-//       event: 'event'
-//     })
+const success = document.querySelector('#success')
+document.querySelector('.register').addEventListener('click', successMessage);
 
-//   }) .then(response => {
-//     if (response.ok) return response.json()
-//   })
-//   .then(data => {
-//     console.log(data)
-
-//   })
-// }
+function successMessage() {
+  success.innerText = "Success! You've been registered!"
+}

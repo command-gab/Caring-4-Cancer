@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 let express  = require('express');
 const app      = express();
 let port     = process.env.PORT || 8701;
@@ -7,12 +9,12 @@ let mongoose = require('mongoose');
 let passport = require('passport');
 let flash    = require('connect-flash');
 let ObjectId = require('mongodb').ObjectID;
-let multer = require('multer');
 
 let morgan       = require('morgan');
 let cookieParser = require('cookie-parser');
 let bodyParser   = require('body-parser');
 let session      = require('express-session');
+const methodOverride = require('method-override');
 
 let configDB = require('./config/database.js');
 
@@ -22,7 +24,7 @@ let db
 mongoose.connect(configDB.url, (err, database) => {
   if (err) return console.log(err)
   db = database
-  require('./app/routes.js')(app, passport, db);
+  require('./app/routes.js')(app, passport, db, ObjectId);
 }); // connect to our database
 
 require('./config/passport')(passport); // pass passport for configuration
@@ -33,7 +35,7 @@ app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser.json()); // get information from html forms
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'))
-
+app.use(methodOverride('_method'))
 
 app.set('view engine', 'ejs'); // set up ejs for templating
 

@@ -17,12 +17,12 @@
                     <img src="/images/logo3.png" class="logo">
 
                     <li><a href="/">HOME</a></li>
-                    <li><a href="/login">COMMUNITY</a></li>
+                    <li><a href="/profile">PROFILE</a></li>
+                    <li><a href="/community">COMMUNITY</a></li>
                     <li><a href="/about">ABOUT</a></li>
                 </ul>
 
-                <a href="/login" id="login">LOGIN</a>
-                <a href="/signup" id="signup">SIGN UP</a>
+                <a href="/logout" id="logout">LOG OUT</a>
 
             </nav>
         </header>
@@ -32,27 +32,28 @@
 
             <h3>Please provide the following information for event registration:</h3>
 
-            <form method="post" action="/eventsForm">
+            <form method="POST" action="/eventForm">
                 <section id="form">
                     <h2>Name</h2>
-                    <input type="text" class="name2" name="name" placeholder="First and last name">
+                    <input type="text" class="name2" value="<%= user.local.email %>" name="user">
                     <h2>Email</h2>
                     <input type="text" class="email2" name="email" placeholder="Email address">
                     <h2 class="quantity">How many are attending?</h2>
                     <input type="number" class="quantity2" placeholder="Attendees" name="quantity">
                     <h2 class="event">Select an event:</h2>
-                    <select name = "event">
-                        <option value="toyDrive" name="toyDrive">Toy Drive</option>
-                        <option value="meditation" name="meditation">Monday Meditation</option>
-                        <option value="virtualMeet" name="virtualMeet">Virtual Meeting (12/8)</option>
-                        <option value="kidTeen" name="kidTeen">Kid/Teen Support</option>
-                        <option value="xmasDinner" name="xmasDinner">Christmas Dinner</option>
-                        <option value="storiesSanta" name="storiesSanta">Stories with Santa</option>
-                        <option value="cooking" name="cooking">Cooking Demo</option>
-                        <option value="meeting2" name="meeting2">Virtual Meeting (12/30)</option>
+                    <select name="event">
+                        <option value="Toy Drive (12/4)" name="toyDrive">Toy Drive</option>
+                        <option value="Monday Meditation (12/6)" name="meditation">Monday Meditation</option>
+                        <option value="Virtual Meeting (12/8)" name="meeting-one">Virtual Meeting (12/8)</option>
+                        <option value="Kid/Teen Support (12/14)" name="kidTeen">Kid/Teen Support</option>
+                        <option value="Christmas Dinner (12/18)" name="Chrismas Dinner">Christmas Dinner</option>
+                        <option value="Stories with Santa (12/19)" name="storiesSanta">Stories with Santa</option>
+                        <option value="Cooking Demo (12/28)" name="cookingDemo">Cooking Demo</option>
+                        <option value="Virtual Meeting (12/30)" name="meeting-two">Virtual Meeting (12/30)</option>
                     </select>
 
                     <button class="register">✓ Register</button>
+                    <h4 id="success"></h4> 
                 </section>
             </form>
 

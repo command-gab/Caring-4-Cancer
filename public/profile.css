@@ -23,13 +23,11 @@ body {
 
 body{
     background-color: rgb(244, 238, 222);
-    width: 100%;
+    width: 99%;
 }
 
 main{
-    width: 100%;
     border-bottom: 1px solid white;
-    padding-bottom: 2%;
 }
 
 div.container{
@@ -38,6 +36,7 @@ div.container{
 
 header{
     height: 100px;
+    width: 103%;
     background: rgb(4, 104, 101);
     margin-top: -1%; 
     margin-left: -1%;  
@@ -95,7 +94,7 @@ li a:hover {
 }
 
 .profile{
-    width: 100%;
+    width: 101%;
 }
 
 .together{
@@ -107,6 +106,7 @@ h1{
     text-align: center;
     color:rgb(4, 104, 101);
     padding-bottom: 2%;
+    font-size: 45px;
     font-weight: 600;
     margin-top: 3%;
     text-shadow: 2px 2px 2px black;
@@ -124,12 +124,12 @@ h2{
 }
 
 h3{
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
     color: rgb(242, 232, 99);
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 600;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 3px 3px 3px black;
 }
 
 .option{
@@ -197,16 +197,44 @@ span{
     font-weight: 600;
 }
 
-/* span{
-    border: 2px solid black;
-    height: 200px;
-    width: 400px;
+.events{
+    /* border: 1px solid black; */
+    height: 500px;
+    width: 700px;
     margin-top: 2%;
-} */
+    margin-left: 25%;
+    margin-bottom: 3%;
+}
+
+#eachEvent{
+    float: left;
+    height: 130px;
+    width: 210px;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-top: 2%;
+    font-size: 15px;
+    background-color:rgba(4, 104, 101, 0.767);
+    color: white;
+    box-shadow: 5px 5px 4px black;
+}
+
+.user, .quantity, .event{
+    margin-left: 5%;
+    margin-top: -1%;
+    padding-top: 13%;
+    width: 2%;
+}
+
+#trash{
+    float: right;
+    margin-top: 5%;
+    margin-right: 3%;
+}
 
 /* FOOTER: */
 
-/* footer{
+footer{
     height: 300px;
     background:rgb(242, 232, 99);
     margin-left: -1%;
@@ -288,6 +316,7 @@ span{
 
 .ein{
     border-top: 1px solid white;
+    width: 95%;
     color: rgb(4, 104, 101);
     font-size: 12px;
     font-weight: 700;
@@ -297,8 +326,90 @@ span{
     padding-top: 1%;
 }
 
+.ein > p{
+    margin-left: -1000%;
+}
+
 .logo2{
     float: right;
-    margin-top: -2.5%;
-    margin-right: 4%;
-} */
+    margin-top: -0.5%;
+    margin-right: -37%;
+}
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    footer{
+        display: none;
+    }
+
+    li a{
+        font-size: 12px;
+    }
+
+    #logout{
+        font-size: 12px;
+        margin-left: -5%;
+        background: none;
+        border: none;
+        color: rgb(242, 232, 99);
+    }
+
+    body, main, header{
+        width: 100%;
+    }
+
+    .profile{
+        width: 96.5%;
+    }
+
+    span, p{
+        visibility: hidden;
+    }
+
+    #diagnosed{
+        width: 80%;
+    }
+
+    #lovedOne{
+        width: 80%;
+        float: left;
+        clear: both;
+        margin-top: 5%;
+    }
+}
+           
+    @media (min-width: 601px) and (max-width: 1024px) {
+       
+        footer{
+            display: none;
+        }
+    
+        li a{
+            font-size: 12px;
+        }
+    
+        #logout{
+            font-size: 12px;
+            margin-left: -5%;
+            background: none;
+            border: none;
+            color: rgb(242, 232, 99);
+        }
+    
+        body, main, header{
+            width: 100%;
+        }
+
+        .profile{
+            width: 97.5%;
+        }
+    
+        span{
+            margin-left: 17%;
+        }
+    
+        .option{
+            width: 90%;
+            margin-left: 3%;
+    }
+}

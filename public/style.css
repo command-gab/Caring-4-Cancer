@@ -494,3 +494,115 @@ footer{
     margin-top: -2.5%;
     margin-right: 4%;
 }
+
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+    footer, .discussion, .card, #slideshow{
+        display: none;
+    }
+
+    .logo{
+        height: 120px;
+        margin-left: 30%;
+    }
+
+    li a{
+        font-size: 12px;
+        margin-left: -250%;
+    }
+
+    #login, #signup{
+        font-size: 12px;
+        background: none;
+        border: none;
+        color:rgb(4, 104, 101);
+    }
+
+    .viewmore{
+        margin-top: 8%;
+        margin-left: 30%;
+    }
+
+    .offer img{
+        margin-left: 20%;
+    }
+
+    header h1{
+        margin-top: 5%;
+        font-size: 30px;
+    }
+    
+    body, main, header, .offer{
+        width: 100%;
+    }
+
+    header p{
+        font-size: 18px;
+        width: 150px;
+        margin-top: 10%;
+        margin-left: 35%;
+    }
+
+    #donate{
+        margin-top: 42%;
+        margin-left: 30%;
+    }
+    }
+           
+    @media (min-width: 601px) and (max-width: 1024px) {
+       
+        footer, .discussion, .card, #slideshow{
+            display: none;
+        }
+    
+        .logo{
+            height: 120px;
+            margin-left: 40%;
+        }
+    
+        li a{
+            font-size: 12px;
+            margin-left: -30%;
+        }
+    
+        #login, #signup{
+            font-size: 12px;
+            background: none;
+            border: none;
+            color:rgb(4, 104, 101);
+        }
+    
+        .viewmore{
+            margin-top: 6%;
+            margin-left: 35%;
+        }
+
+        .offer img{
+            margin-left: 32%;
+        }
+    
+        header h1{
+            margin-top: 5%;
+            font-size: 35px;
+        }
+        
+        body, main, header, .offer{
+            width: 100%;
+        }
+    
+        header p{
+            font-size: 20px;
+            width: 200px;
+            margin-top: 5%;
+            margin-left: 40%;
+        }
+    
+        #donate{
+            margin-top: 17%;
+            margin-left: 40%;
+        }
+        }

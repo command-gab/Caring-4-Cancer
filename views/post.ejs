@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Caring for Cancer</title>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/post.css">
+</head>
+
+<body>
+  <div class="container">
+          <header>
+              <nav>
+                  <ul>
+                      <img src="/images/logo3.png" class="logo">
+  
+                      <li><a href="/">HOME</a></li>
+                      <li><a href="/profile">PROFILE</a></li>
+                      <li><a href="/events">EVENTS</a></li>
+                      <li><a href="/about">ABOUT</a></li>
+                  </ul>
+  
+                  <a href="/logout" id="logout">LOG OUT</a>
+              </nav>
+          </header>
+
+          <ul class="messages">
+    <% for(let i=0; i<posts.length; i++) {%>
+    
+      <li class="message">
+        <h4 class="title"><%= posts[i].title %></h4>
+        <span class="msg"><%= posts[i].msg %></span>
+        <span class="posted">Posted by @<%= posts[i].name %></span><br>
+      </li>
+
+        <!-- Comment Form -->
+        <br><br><br>
+        <section class="submitComment">
+        <form action="/comment/<%= posts[i]._id %>" method="POST">
+          <input type="text" placeholder="Comment" name="comment">
+          <br>
+          <button type="submit">Submit</button>
+        </form>
+      </li>
+    </section>
+      <% } %>
+  </ul>
+
+  <br><hr>
+  <div id="comments">
+<h3>Comments</h3>
+  <%comments.forEach(comment=> {%>
+    <p>
+        <span>@<%= user.local.email %>:</span>
+      <%=comment.comment%>
+    </p>
+    <%})%>
+  </div>
+
+<script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
+
+<script src="/public/main.js"></script>
+
+</body>
+
+</html>

@@ -63,3 +63,24 @@ a:hover{
   padding-left: 3%;
 }
 
+/******************************************
+/* ADDITIONAL LAYOUT
+/*******************************************/
+
+@media (min-width: 300px) and (max-width: 600px) {
+
+  body, .container{
+    width: 80%;
+    background-size: 100%;
+  }
+}
+
+  
+         
+  @media (min-width: 601px) and (max-width: 1024px) {
+
+  body, .container{
+    width: 80%;
+    background-size: 100%;
+  }
+}

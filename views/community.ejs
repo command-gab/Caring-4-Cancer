@@ -16,76 +16,52 @@
                       <img src="/images/logo3.png" class="logo">
   
                       <li><a href="/">HOME</a></li>
-                      <li><a href="/about">ABOUT</a></li>
+                      <li><a href="/profile">PROFILE</a></li>
                       <li><a href="/events">EVENTS</a></li>
+                      <li><a href="/about">ABOUT</a></li>
                   </ul>
   
-                  <a href="/login" id="login">LOGIN</a>
-                  <a href="/signup" id="signup">SIGN UP</a>
+                  <a href="/logout" id="logout">LOG OUT</a>
+
               </nav>
           </header>
 
-    <form action="/search" class="form" method="GET">
-      <input type="text" placeholder="Search" name="search" />
-      <button type="submit">Explore</button>
-  </form>
-
     <main>
-      <div class="col-sm-6">
-        <section class="discussion">
-          <h2>DISCUSSION POSTS</h2>
+      <img src="/images/community.png" class="community">
 
-          <div class="firstquestion">
-              <h3>Best wigs?</h3>
-              <p>My sister (54f) was recently diagnosed with stage 4 ovarian cancer. She had her first chemo treatment
-                  on Friday. My stylist already agreed to styling and cutting her wig when she gets it. Whoever my
-                  sister is working with is saying the wig will be $400 for a synthetic one. Is this about right for a
-                  wig?</p>
-
-
-              <span>Posted 2 hours ago by @denise_c</span>
-          </div>
-
-          <div class="secondquestion">
-              <h3>Recommended coloring book during your days of chemo.</h3>
-              <p>Got this for a friend and will be fun to see which one she is going to color first! Full of positive
-                  messages, but not always PG. You definitely don't want the kids helping with the coloring in this
-                  one!</p>
-              <img src="images/coloringbook.jpg">
-              <span>Posted 3 hours ago by @nick90210</span>
-          </div>
-      </section>
-
-
-
-
-
-
-
+      <form action="/search" class="form" method="GET">
+        <input type="text" placeholder="Search" name="search" />
+        <button type="submit">Explore</button>
+    </form>
+    
         <ul class="discussionPosts">
         <% for(let i=0; i<posts.length; i++) {%>
           <li class="message">
-            <span><%= posts[i].name %></span>
-            <span><%= posts[i].msg %></span>
-            <span><%= posts[i].thumbUp %></span>
-            <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+            <!-- <a href="/post/<%= posts[i]._id %>"> -->
+            <span class="title"><a href="/post/<%= posts[i]._id %>"><strong><%= posts[i].title %></strong></span></a>
+            <span class="msg"><%= posts[i].msg %></span>
+            <span class="posted">Posted by @<%= posts[i].name %></span><br>
+            <span class="num"><%= posts[i].heart %> HEARTS</span>
+            <span><i class="fa fa-heart fa-2x" aria-hidden="true" data-id="<%= posts[i]._id %>"></i></span>
           </li>
         <% } %>
         </ul>
 
+        <section id="share">
         <h2>Share your message</h2>
       <% if (user.local.email) { %>
         <form action="/discussion" method="POST">
-          <input type="text" value="<%= user.local.email %>" name="name">
-          <input type="text" placeholder="What's on your mind?" name="msg">
+          <input type="text" placeholder="Title" class="titInput" name="title" required>
+          <input type="text" placeholder="What's on your mind?" class="msgInput" name="msg">
+          <input type="text" value="<%= user.local.email %>" class="nameInput" name="name">
           <button type="submit" class="submitPost">Post</button>
         </form>
-      </div>
+        </section>
       <% } %>
     </main>
 </div>
 
-<footer>
+<!-- <footer>
   <section class="social">
       <a href="https://twitter.com/gabrielledaryl" class="fa fa-twitter fa-2x"></a>
       <a href="https://www.linkedin.com/in/gabriellesmallwood/" class="fa fa-linkedin fa-2x"></a>
@@ -104,12 +80,12 @@
 
       <p class="ein">Gabrielle Smallwood - Demo Day (December 2, 2021)</p>
       <img src="/images/logo2.png" class="logo2">
-</footer>
+</footer> -->
 
 
 <script src="https://kit.fontawesome.com/c0e668a8ad.js" crossorigin="anonymous"></script>
 
-<script src="/public/main.js"></script>
+<script src="main.js"></script>
 
 </body>
 </html>
